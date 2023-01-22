@@ -94,7 +94,7 @@
         </div>
     </main>
     <footer class="rodape">
-        CES PROJETOS 2023
+        CES PROJETOS - <?= date('Y');?>
     </footer>
 </body>
 </html>
