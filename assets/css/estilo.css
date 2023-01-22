@@ -7,7 +7,7 @@ body {
     height: 100vh;
     margin: 0px;
     display: grid;
-    grid-template-rows: 120px 1fr 60px;
+    grid-template-rows: 180px 1fr 60px;
     grid-template-columns: 1fr;
     grid-template-areas: 
         "cabaçalho " "principal" "rodape";
@@ -15,6 +15,25 @@ body {
 .cabeçalho {
     grid-area: cabaçalho;
     background-color: #1867c0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1;
+    box-shadow: 10px 7px 8px -5px rgba(0,0,0,0.75);
+
+}
+.cabeçalho > h1 {
+    margin: 0px;
+    font-weight: 300;
+    font-size: 2.8rem;
+}
+.cabeçalho h2 > {
+    margin: 0px;
+    font-weight: 200;
+    font-size: 1.6rem;
 }
 
 .principal {
@@ -23,10 +42,94 @@ body {
     background-color: #f0f0f0;
     padding: 20px;
 }
+.conteudo {
+    position: relative;
+    height:  100%;
+    overflow: scroll;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.2 green, blue, alpha);
+}
 
 .rodape {
     grid-area: rodape;
     background-color: #fff;
-    /* position: sticky;
-    bottom: 0px; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2rem;
+    padding-right: 20px;
+    color: #444;
+    position: sticky;
+    bottom: 0px; 
 }
+ .modulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+ }
+
+.modulo {
+    flex-basis: 32%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.modulo > h3 {
+    margin: 0px;
+    color: #fff;
+    font-weight: 300;
+    font-size:  1.5rem;
+    padding: 10px 20px;
+    background-color: #1867c0;
+}
+
+.modulo > ul {
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+
+}
+
+.modulo > ul > li {
+    padding:  7px;
+    font-size: 1.2 rem;
+    cursor: pointer;
+}
+
+.modulo > ul > li > a {
+    display: flex;
+    text-decoration: none;
+    color: #222;
+}
+
+.modulo > ul > li:hover{
+    background-color: #eee;
+}
+
+.modulo.vermelho {border: 2px solid #f44336;}
+.modulo.vermelho > h3 {background-color: #f44336;}
+
+.modulo.roxo {border: 2px solid #6F1AB6;}
+.modulo.roxo > h3 {background-color: #6F1AB6;}
+
+.modulo.azulclaro {border: 2px solid #2DCDDF;}
+.modulo.azulclaro > h3 {background-color: #2DCDDF;}
+
+.modulo.verde {border: 2px solid #2B7A0B;}
+.modulo.verde > h3 {background-color: #2B7A0B;}
+
+.modulo.preto {border: 2px solid #040303;}
+.modulo.preto h3 {background-color: #040303;}
+
+.modulo.laranja {border: 2px solid #FF7000;}
+.modulo.laranja > h3 {background-color: #FF7000;}
+
+.modulo.cinza {border: 2px solid #65647C;}
+.modulo.cinza > h3 {background-color: #65647C;}
+
+.modulo.rosa {border: 2px solid #F07DEA;}
+.modulo.rosa > h3 {background-color: #F07DEA;}
+
+.modulo.marron {border: 2px solid #553939;}
+.modulo.marron > h3 {background-color: #553939;}
